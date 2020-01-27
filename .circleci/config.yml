@@ -8,3 +8,8 @@ jobs:
             - checkout
             - run:
                 command: echo "test"
+
+    workflows:
+        test_workflows:
+            jobs:
+                my_first_job
