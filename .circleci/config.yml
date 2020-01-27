@@ -1,15 +1,15 @@
 version: 2.1
 
 jobs:
-    my_first_job:
-        docker:
-            - image: circleci/python:3.8
-        steps:
-            - checkout
-            - run:
-                command: echo "test"
+  my_first_job:
+    docker:
+      - image: circleci/python:3.8
+    steps:
+      - checkout
+      - run:
+        command: echo "test"
 
-    workflows:
-        test_workflows:
-            jobs:
-                my_first_job
+  workflows:
+    test_workflows:
+      jobs:
+        - my_first_job
